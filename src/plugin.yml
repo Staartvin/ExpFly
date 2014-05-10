@@ -1,0 +1,26 @@
+name: ExpFly
+authors: [Staartvin, Burnett12]
+main: me.staartvin.expfly.ExpFly
+version: 2.3.1
+description: Allow players to fly for experience!
+permissions:
+    expfly.fly:
+        description: Allows a player to fly with xp
+        default: op
+    expfly.ban:
+        description: Allows a player to ban a player
+        default: op
+    expfly.unban:
+        description: Allows a player to unban a player
+        default: op
+    expfly.help:
+        description: Allows a player to see a list of commands
+        default: true
+    expfly.reload:
+        description: Allows a player to reload ExpFly
+        default: op
+commands:
+    xpfly:
+      description: Main command of ExpFly
+      usage: /<command> <argument>
+      aliases: [expfly] 
