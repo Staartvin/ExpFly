@@ -2,6 +2,7 @@ package me.staartvin.expfly;
 
 import me.staartvin.expfly.banhandler.BanHandler;
 import me.staartvin.expfly.commands.Commands;
+import me.staartvin.expfly.enchanthandler.PlayerEnchantHandler;
 import me.staartvin.expfly.files.MainConfig;
 import me.staartvin.expfly.flighthandler.FlightHandler;
 import me.staartvin.expfly.listeners.PlayerDeath;
@@ -31,6 +32,7 @@ public class ExpFly extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PvP(this), this);
 		getServer().getPluginManager().registerEvents(new PlayerShootArrow(this), this);
 		getServer().getPluginManager().registerEvents(new ProjectileLaunch(this), this);
+		getServer().getPluginManager().registerEvents(new PlayerEnchantHandler(this), this);
 		
 		getLogger().info("ExpFly " + getDescription().getVersion() + " has been enabled!");
 	}
