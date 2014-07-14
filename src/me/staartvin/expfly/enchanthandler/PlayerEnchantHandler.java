@@ -20,11 +20,11 @@ public class PlayerEnchantHandler implements Listener
 
 		@EventHandler
 		public void enchantItem(EnchantItemEvent evt)
-			{.
+			{
 				Player enchanter = evt.getEnchanter();
 				int newLevel = enchanter.getLevel() - evt.getExpLevelCost();
 				int newTotal = convertLevelToExp(newLevel);
-				newTotal += Math.floor(p.getExp() * newLevel);
+				newTotal += Math.floor(enchanter.getExp() * newLevel);
 				enchanter.setTotalExperience(0);
 				enchanter.setLevel(0);
 				enchanter.setExp(0);
